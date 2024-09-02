@@ -11,6 +11,14 @@
 		E03CF7A22C85B36100E420EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7A12C85B36100E420EB /* ContentView.swift */; };
 		E03CF7A42C85B36300E420EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E03CF7A32C85B36300E420EB /* Assets.xcassets */; };
 		E03CF7A72C85B36300E420EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E03CF7A62C85B36300E420EB /* Preview Assets.xcassets */; };
+		E03CF7B22C85B49F00E420EB /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7B12C85B49F00E420EB /* NextButton.swift */; };
+		E03CF7B42C85B7E400E420EB /* ProfileSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7B32C85B7E400E420EB /* ProfileSettingView.swift */; };
+		E03CF7B62C85B86D00E420EB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E03CF7B52C85B86D00E420EB /* .gitignore */; };
+		E03CF7B82C85BB8000E420EB /* ProfileImageSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7B72C85BB8000E420EB /* ProfileImageSettingView.swift */; };
+		E03CF7BA2C85C2E600E420EB /* CompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7B92C85C2E600E420EB /* CompleteView.swift */; };
+		E03CF7BD2C85C39900E420EB /* MBTIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7BC2C85C39900E420EB /* MBTIButton.swift */; };
+		E03CF7BF2C85C4CC00E420EB /* CustomBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7BE2C85C4CC00E420EB /* CustomBorder.swift */; };
+		E03CF7C12C85C86A00E420EB /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7C02C85C86A00E420EB /* ProfileImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,14 @@
 		E03CF7A12C85B36100E420EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E03CF7A32C85B36300E420EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E03CF7A62C85B36300E420EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E03CF7B12C85B49F00E420EB /* NextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
+		E03CF7B32C85B7E400E420EB /* ProfileSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingView.swift; sourceTree = "<group>"; };
+		E03CF7B52C85B86D00E420EB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E03CF7B72C85BB8000E420EB /* ProfileImageSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageSettingView.swift; sourceTree = "<group>"; };
+		E03CF7B92C85C2E600E420EB /* CompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteView.swift; sourceTree = "<group>"; };
+		E03CF7BC2C85C39900E420EB /* MBTIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTIButton.swift; sourceTree = "<group>"; };
+		E03CF7BE2C85C4CC00E420EB /* CustomBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBorder.swift; sourceTree = "<group>"; };
+		E03CF7C02C85C86A00E420EB /* ProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +51,7 @@
 		E03CF7932C85B36100E420EB = {
 			isa = PBXGroup;
 			children = (
+				E03CF7B52C85B86D00E420EB /* .gitignore */,
 				E03CF79E2C85B36100E420EB /* PracticeSwiftUI */,
 				E03CF79D2C85B36100E420EB /* Products */,
 			);
@@ -51,8 +68,13 @@
 		E03CF79E2C85B36100E420EB /* PracticeSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				E03CF7BB2C85C38F00E420EB /* Wrapper */,
+				E03CF7AE2C85B47800E420EB /* CustomModifier */,
 				E03CF79F2C85B36100E420EB /* PracticeSwiftUIApp.swift */,
 				E03CF7A12C85B36100E420EB /* ContentView.swift */,
+				E03CF7B32C85B7E400E420EB /* ProfileSettingView.swift */,
+				E03CF7B92C85C2E600E420EB /* CompleteView.swift */,
+				E03CF7B72C85BB8000E420EB /* ProfileImageSettingView.swift */,
 				E03CF7A32C85B36300E420EB /* Assets.xcassets */,
 				E03CF7A52C85B36300E420EB /* Preview Content */,
 			);
@@ -65,6 +87,24 @@
 				E03CF7A62C85B36300E420EB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E03CF7AE2C85B47800E420EB /* CustomModifier */ = {
+			isa = PBXGroup;
+			children = (
+				E03CF7B12C85B49F00E420EB /* NextButton.swift */,
+				E03CF7C02C85C86A00E420EB /* ProfileImage.swift */,
+			);
+			path = CustomModifier;
+			sourceTree = "<group>";
+		};
+		E03CF7BB2C85C38F00E420EB /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				E03CF7BC2C85C39900E420EB /* MBTIButton.swift */,
+				E03CF7BE2C85C4CC00E420EB /* CustomBorder.swift */,
+			);
+			path = Wrapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E03CF7A72C85B36300E420EB /* Preview Assets.xcassets in Resources */,
+				E03CF7B62C85B86D00E420EB /* .gitignore in Resources */,
 				E03CF7A42C85B36300E420EB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +178,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E03CF7B82C85BB8000E420EB /* ProfileImageSettingView.swift in Sources */,
+				E03CF7B22C85B49F00E420EB /* NextButton.swift in Sources */,
+				E03CF7B42C85B7E400E420EB /* ProfileSettingView.swift in Sources */,
+				E03CF7BD2C85C39900E420EB /* MBTIButton.swift in Sources */,
+				E03CF7C12C85C86A00E420EB /* ProfileImage.swift in Sources */,
 				E03CF7A22C85B36100E420EB /* ContentView.swift in Sources */,
 				E03CF7A02C85B36100E420EB /* PracticeSwiftUIApp.swift in Sources */,
+				E03CF7BF2C85C4CC00E420EB /* CustomBorder.swift in Sources */,
+				E03CF7BA2C85C2E600E420EB /* CompleteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
