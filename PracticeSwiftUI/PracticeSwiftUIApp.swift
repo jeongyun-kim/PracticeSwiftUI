@@ -11,7 +11,8 @@ import SwiftUI
 struct PracticeSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            SearchView()
+            CoinView()
+            //SearchView()
             //ContentView()
         }
     }

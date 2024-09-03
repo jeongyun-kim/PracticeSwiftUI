@@ -23,6 +23,10 @@
 		E03CF7DC2C86FDE600E420EB /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7DB2C86FDE600E420EB /* Market.swift */; };
 		E03CF7DF2C86FE2300E420EB /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7DE2C86FE2300E420EB /* NetworkService.swift */; };
 		E03CF7E12C87205200E420EB /* MarketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7E02C87205200E420EB /* MarketData.swift */; };
+		E03CF7E32C87415500E420EB /* CoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7E22C87415500E420EB /* CoinView.swift */; };
+		E03CF7E62C87440900E420EB /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7E52C87440900E420EB /* Banner.swift */; };
+		E03CF7E92C87441A00E420EB /* Color + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7E82C87441A00E420EB /* Color + Extension.swift */; };
+		E03CF7EB2C87469800E420EB /* CoinDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7EA2C87469700E420EB /* CoinDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,10 @@
 		E03CF7DB2C86FDE600E420EB /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
 		E03CF7DE2C86FE2300E420EB /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E03CF7E02C87205200E420EB /* MarketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketData.swift; sourceTree = "<group>"; };
+		E03CF7E22C87415500E420EB /* CoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinView.swift; sourceTree = "<group>"; };
+		E03CF7E52C87440900E420EB /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		E03CF7E82C87441A00E420EB /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
+		E03CF7EA2C87469700E420EB /* CoinDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,7 @@
 		E03CF79E2C85B36100E420EB /* PracticeSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				E03CF7E72C87441000E420EB /* Extension */,
 				E03CF7DD2C86FE1A00E420EB /* Network */,
 				E03CF7D62C86FDAA00E420EB /* 0903 */,
 				E03CF7D52C86FD6200E420EB /* 0902 */,
@@ -128,8 +137,11 @@
 		E03CF7D62C86FDAA00E420EB /* 0903 */ = {
 			isa = PBXGroup;
 			children = (
+				E03CF7E42C87440300E420EB /* Model */,
 				E03CF7D72C86FDB200E420EB /* SearchView.swift */,
 				E03CF7E02C87205200E420EB /* MarketData.swift */,
+				E03CF7E22C87415500E420EB /* CoinView.swift */,
+				E03CF7EA2C87469700E420EB /* CoinDetailView.swift */,
 			);
 			path = 0903;
 			sourceTree = "<group>";
@@ -149,6 +161,22 @@
 				E03CF7DE2C86FE2300E420EB /* NetworkService.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		E03CF7E42C87440300E420EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E03CF7E52C87440900E420EB /* Banner.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E03CF7E72C87441000E420EB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E03CF7E82C87441A00E420EB /* Color + Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,13 +252,17 @@
 			files = (
 				E03CF7D82C86FDB200E420EB /* SearchView.swift in Sources */,
 				E03CF7DC2C86FDE600E420EB /* Market.swift in Sources */,
+				E03CF7E62C87440900E420EB /* Banner.swift in Sources */,
+				E03CF7EB2C87469800E420EB /* CoinDetailView.swift in Sources */,
 				E03CF7B82C85BB8000E420EB /* ProfileImageSettingView.swift in Sources */,
 				E03CF7B22C85B49F00E420EB /* NextButton.swift in Sources */,
 				E03CF7E12C87205200E420EB /* MarketData.swift in Sources */,
 				E03CF7B42C85B7E400E420EB /* ProfileSettingView.swift in Sources */,
 				E03CF7BD2C85C39900E420EB /* MBTIButton.swift in Sources */,
 				E03CF7C12C85C86A00E420EB /* ProfileImage.swift in Sources */,
+				E03CF7E92C87441A00E420EB /* Color + Extension.swift in Sources */,
 				E03CF7A22C85B36100E420EB /* ContentView.swift in Sources */,
+				E03CF7E32C87415500E420EB /* CoinView.swift in Sources */,
 				E03CF7A02C85B36100E420EB /* PracticeSwiftUIApp.swift in Sources */,
 				E03CF7BF2C85C4CC00E420EB /* CustomBorder.swift in Sources */,
 				E03CF7DF2C86FE2300E420EB /* NetworkService.swift in Sources */,
