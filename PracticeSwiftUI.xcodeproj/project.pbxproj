@@ -68,13 +68,10 @@
 		E03CF79E2C85B36100E420EB /* PracticeSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				E03CF7D52C86FD6200E420EB /* 0902 */,
 				E03CF7BB2C85C38F00E420EB /* Wrapper */,
 				E03CF7AE2C85B47800E420EB /* CustomModifier */,
 				E03CF79F2C85B36100E420EB /* PracticeSwiftUIApp.swift */,
-				E03CF7A12C85B36100E420EB /* ContentView.swift */,
-				E03CF7B32C85B7E400E420EB /* ProfileSettingView.swift */,
-				E03CF7B92C85C2E600E420EB /* CompleteView.swift */,
-				E03CF7B72C85BB8000E420EB /* ProfileImageSettingView.swift */,
 				E03CF7A32C85B36300E420EB /* Assets.xcassets */,
 				E03CF7A52C85B36300E420EB /* Preview Content */,
 			);
@@ -93,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				E03CF7B12C85B49F00E420EB /* NextButton.swift */,
-				E03CF7C02C85C86A00E420EB /* ProfileImage.swift */,
 			);
 			path = CustomModifier;
 			sourceTree = "<group>";
@@ -102,9 +98,21 @@
 			isa = PBXGroup;
 			children = (
 				E03CF7BC2C85C39900E420EB /* MBTIButton.swift */,
+				E03CF7C02C85C86A00E420EB /* ProfileImage.swift */,
 				E03CF7BE2C85C4CC00E420EB /* CustomBorder.swift */,
 			);
 			path = Wrapper;
+			sourceTree = "<group>";
+		};
+		E03CF7D52C86FD6200E420EB /* 0902 */ = {
+			isa = PBXGroup;
+			children = (
+				E03CF7A12C85B36100E420EB /* ContentView.swift */,
+				E03CF7B32C85B7E400E420EB /* ProfileSettingView.swift */,
+				E03CF7B72C85BB8000E420EB /* ProfileImageSettingView.swift */,
+				E03CF7B92C85C2E600E420EB /* CompleteView.swift */,
+			);
+			path = 0902;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
