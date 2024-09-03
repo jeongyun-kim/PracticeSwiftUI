@@ -19,6 +19,10 @@
 		E03CF7BD2C85C39900E420EB /* MBTIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7BC2C85C39900E420EB /* MBTIButton.swift */; };
 		E03CF7BF2C85C4CC00E420EB /* CustomBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7BE2C85C4CC00E420EB /* CustomBorder.swift */; };
 		E03CF7C12C85C86A00E420EB /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7C02C85C86A00E420EB /* ProfileImage.swift */; };
+		E03CF7D82C86FDB200E420EB /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7D72C86FDB200E420EB /* SearchView.swift */; };
+		E03CF7DC2C86FDE600E420EB /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7DB2C86FDE600E420EB /* Market.swift */; };
+		E03CF7DF2C86FE2300E420EB /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7DE2C86FE2300E420EB /* NetworkService.swift */; };
+		E03CF7E12C87205200E420EB /* MarketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7E02C87205200E420EB /* MarketData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,10 @@
 		E03CF7BC2C85C39900E420EB /* MBTIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTIButton.swift; sourceTree = "<group>"; };
 		E03CF7BE2C85C4CC00E420EB /* CustomBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBorder.swift; sourceTree = "<group>"; };
 		E03CF7C02C85C86A00E420EB /* ProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
+		E03CF7D72C86FDB200E420EB /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		E03CF7DB2C86FDE600E420EB /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
+		E03CF7DE2C86FE2300E420EB /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E03CF7E02C87205200E420EB /* MarketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,8 @@
 		E03CF79E2C85B36100E420EB /* PracticeSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				E03CF7DD2C86FE1A00E420EB /* Network */,
+				E03CF7D62C86FDAA00E420EB /* 0903 */,
 				E03CF7D52C86FD6200E420EB /* 0902 */,
 				E03CF7BB2C85C38F00E420EB /* Wrapper */,
 				E03CF7AE2C85B47800E420EB /* CustomModifier */,
@@ -113,6 +123,32 @@
 				E03CF7B92C85C2E600E420EB /* CompleteView.swift */,
 			);
 			path = 0902;
+			sourceTree = "<group>";
+		};
+		E03CF7D62C86FDAA00E420EB /* 0903 */ = {
+			isa = PBXGroup;
+			children = (
+				E03CF7D72C86FDB200E420EB /* SearchView.swift */,
+				E03CF7E02C87205200E420EB /* MarketData.swift */,
+			);
+			path = 0903;
+			sourceTree = "<group>";
+		};
+		E03CF7DA2C86FDC600E420EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E03CF7DB2C86FDE600E420EB /* Market.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E03CF7DD2C86FE1A00E420EB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E03CF7DA2C86FDC600E420EB /* Model */,
+				E03CF7DE2C86FE2300E420EB /* NetworkService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,14 +222,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E03CF7D82C86FDB200E420EB /* SearchView.swift in Sources */,
+				E03CF7DC2C86FDE600E420EB /* Market.swift in Sources */,
 				E03CF7B82C85BB8000E420EB /* ProfileImageSettingView.swift in Sources */,
 				E03CF7B22C85B49F00E420EB /* NextButton.swift in Sources */,
+				E03CF7E12C87205200E420EB /* MarketData.swift in Sources */,
 				E03CF7B42C85B7E400E420EB /* ProfileSettingView.swift in Sources */,
 				E03CF7BD2C85C39900E420EB /* MBTIButton.swift in Sources */,
 				E03CF7C12C85C86A00E420EB /* ProfileImage.swift in Sources */,
 				E03CF7A22C85B36100E420EB /* ContentView.swift in Sources */,
 				E03CF7A02C85B36100E420EB /* PracticeSwiftUIApp.swift in Sources */,
 				E03CF7BF2C85C4CC00E420EB /* CustomBorder.swift in Sources */,
+				E03CF7DF2C86FE2300E420EB /* NetworkService.swift in Sources */,
 				E03CF7BA2C85C2E600E420EB /* CompleteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
