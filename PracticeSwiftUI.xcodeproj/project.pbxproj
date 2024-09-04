@@ -27,6 +27,8 @@
 		E03CF7E62C87440900E420EB /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7E52C87440900E420EB /* Banner.swift */; };
 		E03CF7E92C87441A00E420EB /* Color + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7E82C87441A00E420EB /* Color + Extension.swift */; };
 		E03CF7EB2C87469800E420EB /* CoinDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7EA2C87469700E420EB /* CoinDetailView.swift */; };
+		E03CF7F72C8890CA00E420EB /* NavigationLazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7F62C8890CA00E420EB /* NavigationLazyView.swift */; };
+		E03CF7F92C88910400E420EB /* CoinView_0904.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7F82C88910400E420EB /* CoinView_0904.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		E03CF7E52C87440900E420EB /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		E03CF7E82C87441A00E420EB /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
 		E03CF7EA2C87469700E420EB /* CoinDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailView.swift; sourceTree = "<group>"; };
+		E03CF7F62C8890CA00E420EB /* NavigationLazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLazyView.swift; sourceTree = "<group>"; };
+		E03CF7F82C88910400E420EB /* CoinView_0904.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinView_0904.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 		E03CF79E2C85B36100E420EB /* PracticeSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				E03CF7F52C88905900E420EB /* 0904 */,
 				E03CF7E72C87441000E420EB /* Extension */,
 				E03CF7DD2C86FE1A00E420EB /* Network */,
 				E03CF7D62C86FDAA00E420EB /* 0903 */,
@@ -119,6 +124,7 @@
 				E03CF7BC2C85C39900E420EB /* MBTIButton.swift */,
 				E03CF7C02C85C86A00E420EB /* ProfileImage.swift */,
 				E03CF7BE2C85C4CC00E420EB /* CustomBorder.swift */,
+				E03CF7F62C8890CA00E420EB /* NavigationLazyView.swift */,
 			);
 			path = Wrapper;
 			sourceTree = "<group>";
@@ -177,6 +183,14 @@
 				E03CF7E82C87441A00E420EB /* Color + Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		E03CF7F52C88905900E420EB /* 0904 */ = {
+			isa = PBXGroup;
+			children = (
+				E03CF7F82C88910400E420EB /* CoinView_0904.swift */,
+			);
+			path = 0904;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +266,7 @@
 			files = (
 				E03CF7D82C86FDB200E420EB /* SearchView.swift in Sources */,
 				E03CF7DC2C86FDE600E420EB /* Market.swift in Sources */,
+				E03CF7F92C88910400E420EB /* CoinView_0904.swift in Sources */,
 				E03CF7E62C87440900E420EB /* Banner.swift in Sources */,
 				E03CF7EB2C87469800E420EB /* CoinDetailView.swift in Sources */,
 				E03CF7B82C85BB8000E420EB /* ProfileImageSettingView.swift in Sources */,
@@ -264,6 +279,7 @@
 				E03CF7A22C85B36100E420EB /* ContentView.swift in Sources */,
 				E03CF7E32C87415500E420EB /* CoinView.swift in Sources */,
 				E03CF7A02C85B36100E420EB /* PracticeSwiftUIApp.swift in Sources */,
+				E03CF7F72C8890CA00E420EB /* NavigationLazyView.swift in Sources */,
 				E03CF7BF2C85C4CC00E420EB /* CustomBorder.swift in Sources */,
 				E03CF7DF2C86FE2300E420EB /* NetworkService.swift in Sources */,
 				E03CF7BA2C85C2E600E420EB /* CompleteView.swift in Sources */,

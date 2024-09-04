@@ -11,7 +11,8 @@ struct Market: Hashable, Codable {
     let market: String
     let koreanName: String
     let englishName: String
-
+    var isLike = false
+    
     enum CodingKeys: String, CodingKey {
         case market
         case koreanName = "korean_name"
