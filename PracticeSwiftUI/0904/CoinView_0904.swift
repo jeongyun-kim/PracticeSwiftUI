@@ -15,17 +15,25 @@ struct CoinView_0904: View {
     @State private var filteredMarkets: [Market] = []
     
     var body: some View {
-        NavigationView {
+        NavigationWrapper {
             ScrollView {
                 bannerView(market, banner: banner)
                 marketListView()
             }
             .frame(maxWidth: .infinity)
             .navigationTitle("My Money")
+            // 네비게이션 구성
+            .navigationBar {
+               
+            } trailing: {
+                Image(systemName: "person.fill")
+            }
             .searchable(text: $keyword, prompt: "마켓을 검색해보세요")
             .onSubmit(of: .search) { // 검색버튼 탭
                 filteredMarkets = markets.filter { $0.koreanName.contains(keyword) }
             }
+         
+
         }
         .task {
             NetworkService.shared.fetchData { result in

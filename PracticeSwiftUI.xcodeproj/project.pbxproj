@@ -29,6 +29,8 @@
 		E03CF7EB2C87469800E420EB /* CoinDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7EA2C87469700E420EB /* CoinDetailView.swift */; };
 		E03CF7F72C8890CA00E420EB /* NavigationLazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7F62C8890CA00E420EB /* NavigationLazyView.swift */; };
 		E03CF7F92C88910400E420EB /* CoinView_0904.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7F82C88910400E420EB /* CoinView_0904.swift */; };
+		E03CF7FB2C8899D000E420EB /* NavigationBarWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7FA2C8899D000E420EB /* NavigationBarWrapper.swift */; };
+		E03CF7FD2C889B8200E420EB /* NavigationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7FC2C889B8200E420EB /* NavigationWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		E03CF7EA2C87469700E420EB /* CoinDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailView.swift; sourceTree = "<group>"; };
 		E03CF7F62C8890CA00E420EB /* NavigationLazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLazyView.swift; sourceTree = "<group>"; };
 		E03CF7F82C88910400E420EB /* CoinView_0904.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinView_0904.swift; sourceTree = "<group>"; };
+		E03CF7FA2C8899D000E420EB /* NavigationBarWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarWrapper.swift; sourceTree = "<group>"; };
+		E03CF7FC2C889B8200E420EB /* NavigationWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,8 @@
 				E03CF7C02C85C86A00E420EB /* ProfileImage.swift */,
 				E03CF7BE2C85C4CC00E420EB /* CustomBorder.swift */,
 				E03CF7F62C8890CA00E420EB /* NavigationLazyView.swift */,
+				E03CF7FA2C8899D000E420EB /* NavigationBarWrapper.swift */,
+				E03CF7FC2C889B8200E420EB /* NavigationWrapper.swift */,
 			);
 			path = Wrapper;
 			sourceTree = "<group>";
@@ -279,10 +285,12 @@
 				E03CF7A22C85B36100E420EB /* ContentView.swift in Sources */,
 				E03CF7E32C87415500E420EB /* CoinView.swift in Sources */,
 				E03CF7A02C85B36100E420EB /* PracticeSwiftUIApp.swift in Sources */,
+				E03CF7FD2C889B8200E420EB /* NavigationWrapper.swift in Sources */,
 				E03CF7F72C8890CA00E420EB /* NavigationLazyView.swift in Sources */,
 				E03CF7BF2C85C4CC00E420EB /* CustomBorder.swift in Sources */,
 				E03CF7DF2C86FE2300E420EB /* NetworkService.swift in Sources */,
 				E03CF7BA2C85C2E600E420EB /* CompleteView.swift in Sources */,
+				E03CF7FB2C8899D000E420EB /* NavigationBarWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
