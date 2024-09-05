@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E01765802C893A55000B649E /* RandomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E017657F2C893A55000B649E /* RandomImageView.swift */; };
+		E01765822C89F43E000B649E /* RandomImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01765812C89F43E000B649E /* RandomImageDetailView.swift */; };
+		E01765842C89F6C5000B649E /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01765832C89F6C5000B649E /* RoundedImageView.swift */; };
 		E03CF7A02C85B36100E420EB /* PracticeSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF79F2C85B36100E420EB /* PracticeSwiftUIApp.swift */; };
 		E03CF7A22C85B36100E420EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7A12C85B36100E420EB /* ContentView.swift */; };
 		E03CF7A42C85B36300E420EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E03CF7A32C85B36300E420EB /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E017657F2C893A55000B649E /* RandomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImageView.swift; sourceTree = "<group>"; };
+		E01765812C89F43E000B649E /* RandomImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImageDetailView.swift; sourceTree = "<group>"; };
+		E01765832C89F6C5000B649E /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		E03CF79C2C85B36100E420EB /* PracticeSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E03CF79F2C85B36100E420EB /* PracticeSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeSwiftUIApp.swift; sourceTree = "<group>"; };
 		E03CF7A12C85B36100E420EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -131,6 +137,7 @@
 				E03CF7F62C8890CA00E420EB /* NavigationLazyView.swift */,
 				E03CF7FA2C8899D000E420EB /* NavigationBarWrapper.swift */,
 				E03CF7FC2C889B8200E420EB /* NavigationWrapper.swift */,
+				E01765832C89F6C5000B649E /* RoundedImageView.swift */,
 			);
 			path = Wrapper;
 			sourceTree = "<group>";
@@ -195,6 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				E03CF7F82C88910400E420EB /* CoinView_0904.swift */,
+				E017657F2C893A55000B649E /* RandomImageView.swift */,
+				E01765812C89F43E000B649E /* RandomImageDetailView.swift */,
 			);
 			path = 0904;
 			sourceTree = "<group>";
@@ -271,12 +280,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E03CF7D82C86FDB200E420EB /* SearchView.swift in Sources */,
+				E01765802C893A55000B649E /* RandomImageView.swift in Sources */,
 				E03CF7DC2C86FDE600E420EB /* Market.swift in Sources */,
 				E03CF7F92C88910400E420EB /* CoinView_0904.swift in Sources */,
 				E03CF7E62C87440900E420EB /* Banner.swift in Sources */,
 				E03CF7EB2C87469800E420EB /* CoinDetailView.swift in Sources */,
 				E03CF7B82C85BB8000E420EB /* ProfileImageSettingView.swift in Sources */,
 				E03CF7B22C85B49F00E420EB /* NextButton.swift in Sources */,
+				E01765842C89F6C5000B649E /* RoundedImageView.swift in Sources */,
 				E03CF7E12C87205200E420EB /* MarketData.swift in Sources */,
 				E03CF7B42C85B7E400E420EB /* ProfileSettingView.swift in Sources */,
 				E03CF7BD2C85C39900E420EB /* MBTIButton.swift in Sources */,
@@ -285,6 +296,7 @@
 				E03CF7A22C85B36100E420EB /* ContentView.swift in Sources */,
 				E03CF7E32C87415500E420EB /* CoinView.swift in Sources */,
 				E03CF7A02C85B36100E420EB /* PracticeSwiftUIApp.swift in Sources */,
+				E01765822C89F43E000B649E /* RandomImageDetailView.swift in Sources */,
 				E03CF7FD2C889B8200E420EB /* NavigationWrapper.swift in Sources */,
 				E03CF7F72C8890CA00E420EB /* NavigationLazyView.swift in Sources */,
 				E03CF7BF2C85C4CC00E420EB /* CustomBorder.swift in Sources */,
