@@ -28,7 +28,7 @@ struct RandomImageView: View {
     }
 }
 
-struct SectionView: View {
+private struct SectionView: View {
     @Binding var title: String
     
     var body: some View {
@@ -56,6 +56,11 @@ private struct HorizontalImageStackView: View {
                     NavigationLink {
                         let view = RandomImageDetailView(title: $title, url: url)
                         NavigationLazyView(view)
+                        // 상세뷰를 감싼 뷰가 사라질 때, 상세뷰에 입력되어있는 타이틀 가져와서 바꿔주기
+                            .onDisappear(perform: {
+                                let newTitle = view.$title.wrappedValue
+                                title = newTitle
+                            })
                     } label: {
                         makeRoundedImageView(url: url)
                     }
