@@ -36,6 +36,11 @@
 		E03CF7F92C88910400E420EB /* CoinView_0904.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7F82C88910400E420EB /* CoinView_0904.swift */; };
 		E03CF7FB2C8899D000E420EB /* NavigationBarWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7FA2C8899D000E420EB /* NavigationBarWrapper.swift */; };
 		E03CF7FD2C889B8200E420EB /* NavigationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CF7FC2C889B8200E420EB /* NavigationWrapper.swift */; };
+		E07A1FCA2C919B5900557A22 /* FSCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A1FC92C919B5900557A22 /* FSCalendarView.swift */; };
+		E07A1FCC2C919C5800557A22 /* FSCalendarViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A1FCB2C919C5800557A22 /* FSCalendarViewControllerWrapper.swift */; };
+		E07A1FCF2C919C8700557A22 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = E07A1FCE2C919C8700557A22 /* FSCalendar */; };
+		E07A1FD22C919CF300557A22 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E07A1FD12C919CF300557A22 /* SnapKit */; };
+		E07A1FD52C919D6500557A22 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A1FD42C919D6500557A22 /* CalendarCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +74,9 @@
 		E03CF7F82C88910400E420EB /* CoinView_0904.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinView_0904.swift; sourceTree = "<group>"; };
 		E03CF7FA2C8899D000E420EB /* NavigationBarWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarWrapper.swift; sourceTree = "<group>"; };
 		E03CF7FC2C889B8200E420EB /* NavigationWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationWrapper.swift; sourceTree = "<group>"; };
+		E07A1FC92C919B5900557A22 /* FSCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCalendarView.swift; sourceTree = "<group>"; };
+		E07A1FCB2C919C5800557A22 /* FSCalendarViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCalendarViewControllerWrapper.swift; sourceTree = "<group>"; };
+		E07A1FD42C919D6500557A22 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E07A1FCF2C919C8700557A22 /* FSCalendar in Frameworks */,
+				E07A1FD22C919CF300557A22 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +112,7 @@
 		E03CF79E2C85B36100E420EB /* PracticeSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				E07A1FC82C919B4E00557A22 /* 0912 */,
 				E03CF7F52C88905900E420EB /* 0904 */,
 				E03CF7E72C87441000E420EB /* Extension */,
 				E03CF7DD2C86FE1A00E420EB /* Network */,
@@ -214,6 +225,16 @@
 			path = 0904;
 			sourceTree = "<group>";
 		};
+		E07A1FC82C919B4E00557A22 /* 0912 */ = {
+			isa = PBXGroup;
+			children = (
+				E07A1FC92C919B5900557A22 /* FSCalendarView.swift */,
+				E07A1FCB2C919C5800557A22 /* FSCalendarViewControllerWrapper.swift */,
+				E07A1FD42C919D6500557A22 /* CalendarCell.swift */,
+			);
+			path = 0912;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,6 +251,10 @@
 			dependencies = (
 			);
 			name = PracticeSwiftUI;
+			packageProductDependencies = (
+				E07A1FCE2C919C8700557A22 /* FSCalendar */,
+				E07A1FD12C919CF300557A22 /* SnapKit */,
+			);
 			productName = PracticeSwiftUI;
 			productReference = E03CF79C2C85B36100E420EB /* PracticeSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -258,6 +283,10 @@
 				Base,
 			);
 			mainGroup = E03CF7932C85B36100E420EB;
+			packageReferences = (
+				E07A1FCD2C919C8700557A22 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				E07A1FD02C919CF300557A22 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = E03CF79D2C85B36100E420EB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -291,13 +320,16 @@
 				E03CF7F92C88910400E420EB /* CoinView_0904.swift in Sources */,
 				E03CF7E62C87440900E420EB /* Banner.swift in Sources */,
 				E03CF7EB2C87469800E420EB /* CoinDetailView.swift in Sources */,
+				E07A1FD52C919D6500557A22 /* CalendarCell.swift in Sources */,
 				E03CF7B82C85BB8000E420EB /* ProfileImageSettingView.swift in Sources */,
+				E07A1FCC2C919C5800557A22 /* FSCalendarViewControllerWrapper.swift in Sources */,
 				E03CF7B22C85B49F00E420EB /* NextButton.swift in Sources */,
 				E01765842C89F6C5000B649E /* RoundedImageView.swift in Sources */,
 				E03CF7E12C87205200E420EB /* MarketData.swift in Sources */,
 				E03CF7B42C85B7E400E420EB /* ProfileSettingView.swift in Sources */,
 				E03CF7BD2C85C39900E420EB /* MBTIButton.swift in Sources */,
 				E03CF7C12C85C86A00E420EB /* ProfileImage.swift in Sources */,
+				E07A1FCA2C919B5900557A22 /* FSCalendarView.swift in Sources */,
 				E03CF7E92C87441A00E420EB /* Color + Extension.swift in Sources */,
 				E01765882C89FBD5000B649E /* CategoryView.swift in Sources */,
 				E03CF7A22C85B36100E420EB /* ContentView.swift in Sources */,
@@ -444,6 +476,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PracticeSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = L348QC8MG7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -472,6 +505,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PracticeSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = L348QC8MG7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -514,6 +548,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E07A1FCD2C919C8700557A22 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+		E07A1FD02C919CF300557A22 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E07A1FCE2C919C8700557A22 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E07A1FCD2C919C8700557A22 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+		E07A1FD12C919CF300557A22 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E07A1FD02C919CF300557A22 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E03CF7942C85B36100E420EB /* Project object */;
 }
