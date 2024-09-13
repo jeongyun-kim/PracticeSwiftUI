@@ -20,23 +20,24 @@ struct FSCalendarViewControllerWrapper: UIViewControllerRepresentable {
     }
     
     class FSCalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
-        private var selectedCell: CalendarCell? = nil
-        
+        var vm: CalendarViewModel = CalendarViewModel.shared
+      
         private lazy var calendar: FSCalendar = {
             let calendar = FSCalendar()
+            
             calendar.delegate = self
             calendar.dataSource = self
             calendar.register(CalendarCell.self, forCellReuseIdentifier: CalendarCell.identifier)
             calendar.appearance.caseOptions = .weekdayUsesSingleUpperCase
-            calendar.placeholderType = .none
             calendar.appearance.weekdayTextColor = .black
             calendar.appearance.titleFont = UIFont.systemFont(ofSize: 15, weight: .bold)
             calendar.appearance.titleSelectionColor = .white
-            calendar.appearance.todayColor = UIColor(red: 0.99, green: 0.75, blue: 0.38, alpha: 1.00) //UIColor(red: 0.99, green: 0.75, blue: 0.38, alpha: 1.00)
+            calendar.appearance.todayColor = UIColor(red: 1.00, green: 0.54, blue: 0.07, alpha: 1.00) 
             calendar.appearance.headerMinimumDissolvedAlpha = 0.0
-            calendar.appearance.selectionColor = UIColor(red: 0.99, green: 0.75, blue: 0.38, alpha: 1.00) //UIColor(red: 0.99, green: 0.75, blue: 0.38, alpha: 1.00)
+            calendar.appearance.selectionColor = UIColor(red: 1.00, green: 0.54, blue: 0.07, alpha: 1.00)
             calendar.appearance.weekdayFont = UIFont.systemFont(ofSize: 14)
             calendar.headerHeight = 0
+            calendar.placeholderType = .none
             return calendar
         }()
         
@@ -44,7 +45,7 @@ struct FSCalendarViewControllerWrapper: UIViewControllerRepresentable {
             super.viewDidLoad()
             setupHierarchy()
             setupConstraints()
-            //view.backgroundColor = UIColor(red: 1.00, green: 0.93, blue: 0.66, alpha: 0.1)
+            vm.action(.selectedDate(date: calendar.today))
         }
         
         private func setupHierarchy() {
@@ -59,15 +60,18 @@ struct FSCalendarViewControllerWrapper: UIViewControllerRepresentable {
         
         func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
             guard let cell = calendar.dequeueReusableCell(withIdentifier: CalendarCell.identifier, for: date, at: position) as? CalendarCell else { return FSCalendarCell() }
-            cell.configureCell()
+            cell.configureCell(date == calendar.today)
             return cell
         }
         
         func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+            guard let preCell = calendar.cell(for: vm.output.selectedDate, at: monthPosition) as? CalendarCell else { return }
+            preCell.configureCell(false)
+            
             calendar.today = date
-            guard let cell = calendar.cell(for: date, at: monthPosition) as? CalendarCell else { return }
-            cell.thumbImageView.layer.opacity = 0.1
-        
+            guard let todayCell = calendar.cell(for: date, at: monthPosition) as? CalendarCell else { return }
+            todayCell.configureCell(true)
+            vm.action(.selectedDate(date: date))
         }
     }
 }

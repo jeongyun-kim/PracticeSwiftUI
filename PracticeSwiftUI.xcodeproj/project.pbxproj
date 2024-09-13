@@ -41,6 +41,8 @@
 		E07A1FCF2C919C8700557A22 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = E07A1FCE2C919C8700557A22 /* FSCalendar */; };
 		E07A1FD22C919CF300557A22 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E07A1FD12C919CF300557A22 /* SnapKit */; };
 		E07A1FD52C919D6500557A22 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A1FD42C919D6500557A22 /* CalendarCell.swift */; };
+		E07A1FED2C940A8F00557A22 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A1FEC2C940A8F00557A22 /* CalendarViewModel.swift */; };
+		E07A1FF12C94140D00557A22 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A1FF02C94140D00557A22 /* BottomSheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +79,8 @@
 		E07A1FC92C919B5900557A22 /* FSCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCalendarView.swift; sourceTree = "<group>"; };
 		E07A1FCB2C919C5800557A22 /* FSCalendarViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCalendarViewControllerWrapper.swift; sourceTree = "<group>"; };
 		E07A1FD42C919D6500557A22 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		E07A1FEC2C940A8F00557A22 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		E07A1FF02C94140D00557A22 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +235,8 @@
 				E07A1FC92C919B5900557A22 /* FSCalendarView.swift */,
 				E07A1FCB2C919C5800557A22 /* FSCalendarViewControllerWrapper.swift */,
 				E07A1FD42C919D6500557A22 /* CalendarCell.swift */,
+				E07A1FEC2C940A8F00557A22 /* CalendarViewModel.swift */,
+				E07A1FF02C94140D00557A22 /* BottomSheetView.swift */,
 			);
 			path = 0912;
 			sourceTree = "<group>";
@@ -327,6 +333,7 @@
 				E01765842C89F6C5000B649E /* RoundedImageView.swift in Sources */,
 				E03CF7E12C87205200E420EB /* MarketData.swift in Sources */,
 				E03CF7B42C85B7E400E420EB /* ProfileSettingView.swift in Sources */,
+				E07A1FF12C94140D00557A22 /* BottomSheetView.swift in Sources */,
 				E03CF7BD2C85C39900E420EB /* MBTIButton.swift in Sources */,
 				E03CF7C12C85C86A00E420EB /* ProfileImage.swift in Sources */,
 				E07A1FCA2C919B5900557A22 /* FSCalendarView.swift in Sources */,
@@ -338,6 +345,7 @@
 				E01765822C89F43E000B649E /* RandomImageDetailView.swift in Sources */,
 				E03CF7FD2C889B8200E420EB /* NavigationWrapper.swift in Sources */,
 				E03CF7F72C8890CA00E420EB /* NavigationLazyView.swift in Sources */,
+				E07A1FED2C940A8F00557A22 /* CalendarViewModel.swift in Sources */,
 				E03CF7BF2C85C4CC00E420EB /* CustomBorder.swift in Sources */,
 				E03CF7DF2C86FE2300E420EB /* NetworkService.swift in Sources */,
 				E03CF7BA2C85C2E600E420EB /* CompleteView.swift in Sources */,

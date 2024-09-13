@@ -72,7 +72,8 @@ final class CalendarCell: FSCalendarCell {
         return result - 8
     }
     
-    func configureCell() {
+    func configureCell(_ isToday: Bool) {
+        thumbImageView.layer.opacity = isToday ? 0.05 : 0.2
         thumbImageView.image = UIImage(named: "05")
     }
     
