@@ -43,6 +43,9 @@
 		E07A1FD52C919D6500557A22 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A1FD42C919D6500557A22 /* CalendarCell.swift */; };
 		E07A1FED2C940A8F00557A22 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A1FEC2C940A8F00557A22 /* CalendarViewModel.swift */; };
 		E07A1FF12C94140D00557A22 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A1FF02C94140D00557A22 /* BottomSheetView.swift */; };
+		E07A1FF62C94261D00557A22 /* Color +.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A1FF52C94261D00557A22 /* Color +.swift */; };
+		E07A1FFB2C94891D00557A22 /* BottomSheetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A1FFA2C94891D00557A22 /* BottomSheetHelper.swift */; };
+		E07A20182C948EFD00557A22 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A20172C948EFD00557A22 /* MainTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +84,9 @@
 		E07A1FD42C919D6500557A22 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		E07A1FEC2C940A8F00557A22 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		E07A1FF02C94140D00557A22 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
+		E07A1FF52C94261D00557A22 /* Color +.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color +.swift"; sourceTree = "<group>"; };
+		E07A1FFA2C94891D00557A22 /* BottomSheetHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetHelper.swift; sourceTree = "<group>"; };
+		E07A20172C948EFD00557A22 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,13 +238,24 @@
 		E07A1FC82C919B4E00557A22 /* 0912 */ = {
 			isa = PBXGroup;
 			children = (
+				E07A1FF92C94888F00557A22 /* Bottom */,
+				E07A20172C948EFD00557A22 /* MainTabView.swift */,
+				E07A1FF52C94261D00557A22 /* Color +.swift */,
 				E07A1FC92C919B5900557A22 /* FSCalendarView.swift */,
 				E07A1FCB2C919C5800557A22 /* FSCalendarViewControllerWrapper.swift */,
 				E07A1FD42C919D6500557A22 /* CalendarCell.swift */,
 				E07A1FEC2C940A8F00557A22 /* CalendarViewModel.swift */,
-				E07A1FF02C94140D00557A22 /* BottomSheetView.swift */,
 			);
 			path = 0912;
+			sourceTree = "<group>";
+		};
+		E07A1FF92C94888F00557A22 /* Bottom */ = {
+			isa = PBXGroup;
+			children = (
+				E07A1FF02C94140D00557A22 /* BottomSheetView.swift */,
+				E07A1FFA2C94891D00557A22 /* BottomSheetHelper.swift */,
+			);
+			path = Bottom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +346,7 @@
 				E07A1FD52C919D6500557A22 /* CalendarCell.swift in Sources */,
 				E03CF7B82C85BB8000E420EB /* ProfileImageSettingView.swift in Sources */,
 				E07A1FCC2C919C5800557A22 /* FSCalendarViewControllerWrapper.swift in Sources */,
+				E07A20182C948EFD00557A22 /* MainTabView.swift in Sources */,
 				E03CF7B22C85B49F00E420EB /* NextButton.swift in Sources */,
 				E01765842C89F6C5000B649E /* RoundedImageView.swift in Sources */,
 				E03CF7E12C87205200E420EB /* MarketData.swift in Sources */,
@@ -338,9 +356,11 @@
 				E03CF7C12C85C86A00E420EB /* ProfileImage.swift in Sources */,
 				E07A1FCA2C919B5900557A22 /* FSCalendarView.swift in Sources */,
 				E03CF7E92C87441A00E420EB /* Color + Extension.swift in Sources */,
+				E07A1FF62C94261D00557A22 /* Color +.swift in Sources */,
 				E01765882C89FBD5000B649E /* CategoryView.swift in Sources */,
 				E03CF7A22C85B36100E420EB /* ContentView.swift in Sources */,
 				E03CF7E32C87415500E420EB /* CoinView.swift in Sources */,
+				E07A1FFB2C94891D00557A22 /* BottomSheetHelper.swift in Sources */,
 				E03CF7A02C85B36100E420EB /* PracticeSwiftUIApp.swift in Sources */,
 				E01765822C89F43E000B649E /* RandomImageDetailView.swift in Sources */,
 				E03CF7FD2C889B8200E420EB /* NavigationWrapper.swift in Sources */,

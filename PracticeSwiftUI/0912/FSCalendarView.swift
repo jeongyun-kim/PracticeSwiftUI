@@ -7,55 +7,65 @@
 
 import SwiftUI
 
+
 struct FSCalendarView: View {
-    enum Detents {
-        static let mid: PresentationDetent = .fraction(0.3)
-        static let large: PresentationDetent = .fraction(0.7)
-        
-        
-    }
-    
-    @StateObject private var vm = CalendarViewModel.shared
+    @StateObject var vm = CalendarViewModel()
     @State private var isPresenting = true
-    @State private var selectedDetent: PresentationDetent = .fraction(0.3)
+    
+    enum Detents {
+        case mid
+        case large
+        
+        var detents: PresentationDetent {
+            switch self {
+            case .mid:
+                return .fraction(0.4)
+            case .large:
+                return .fraction(0.75)
+            }
+        }
+    }
     
     var body: some View {
         NavigationView {
             GeometryReader { proxy in
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("2024년 9월")
-                        .font(.callout)
-                        .foregroundStyle(.gray.opacity(0.8))
-                        .padding(.horizontal)
-                        .padding(.top, 16)
-                        .padding(.bottom, 4)
-                    
-                    Text("✨ 오늘은 어떤 팝업을 다녀오셨나요?")
-                        .font(.title2)
-                        .bold()
-                        .padding(.horizontal)
-                        .padding(.bottom, 8)
-                    
-                    FSCalendarViewControllerWrapper()
-                        .frame(height: proxy.size.height * 0.55)
-                        .padding(.horizontal)
-                    
-                        .sheet(isPresented: $isPresenting, content: {
-                            BottomSheetView()
-                                .presentationDetents([.fraction(0.3), .fraction(0.7)], selection: $selectedDetent)
-                                .presentationBackgroundInteraction(.enabled)
-                                .presentationDragIndicator(.hidden)
-                                .presentationCornerRadius(32)
-                                .interactiveDismissDisabled()
-                        })
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(vm.output.currentDate)
+                            .font(.callout)
+                            .foregroundStyle(.gray.opacity(0.8))
+                            .padding(.horizontal)
+                            .padding(.top, 16)
+                            .padding(.bottom, 4)
                         
-                
+                        Text("✨ 오늘은 어떤 팝업을 다녀오셨나요?")
+                            .font(.title2)
+                            .bold()
+                            .padding(.horizontal)
+                            .padding(.bottom, 8)
+                        
+                        
+                        FSCalendarViewControllerWrapper(vm: vm)
+                            .frame(height: (proxy.size.width-32))
+                            .padding(.horizontal)
+//                            .sheet(isPresented: $isPresenting, content: {
+//                                BottomSheetView()
+//                                    .presentationDetents([Detents.mid.detents, Detents.large.detents])
+//                                    .presentationBackgroundInteraction(.enabled)
+//                                    .presentationDragIndicator(.hidden)
+//                                    .presentationCornerRadius(42)
+//                                    .interactiveDismissDisabled()
+//                            })
+                    }
+                    
                 }
-           
-                
             }
         }
         
+        
+        //
+        //
+
     }
 }
 

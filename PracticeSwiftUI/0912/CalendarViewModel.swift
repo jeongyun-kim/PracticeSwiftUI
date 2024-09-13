@@ -9,7 +9,6 @@ import Foundation
 import Combine
 
 final class CalendarViewModel: ObservableObject {
-    static let shared = CalendarViewModel()
     private var subscriptions = Set<AnyCancellable>()
     
     var input = Input()
@@ -17,30 +16,41 @@ final class CalendarViewModel: ObservableObject {
     
     enum InputAction {
         case selectedDate(date: Date?)
+        case currentDate(year: Int?, month: Int?)
     }
     
     func action(_ action: InputAction) {
         switch action {
         case .selectedDate(let today):
             input.selectedDate.send(today)
+        case .currentDate(let year, let month):
+            input.calendar.send([year, month])
         }
     }
     
     struct Input {
         let selectedDate = CurrentValueSubject<Date?, Never>(nil)
-       // @State private var selectedDetent: PresentationDetent = .fraction(0.3)
+        let calendar = PassthroughSubject<[Int?], Never>()
     }
     
     struct Output {
         var selectedDate = Date()
+        var currentDate = ""
     }
     
     init() {
         input.selectedDate
             .sink { value in
                 guard let value else { return }
-                self.output.selectedDate = value
-                print(self.output.selectedDate)
+                print(value)
             }.store(in: &subscriptions)
+        
+        input.calendar
+            .sink { [weak self] value in
+                guard let self else { return }
+                guard let year = value[0], let month = value[1] else { return }
+                self.output.currentDate = "\(year)년 \(month)월"
+            }.store(in: &subscriptions)
+       
     }
 }

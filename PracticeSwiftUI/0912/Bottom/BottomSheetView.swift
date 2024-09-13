@@ -14,8 +14,10 @@ struct BottomSheetView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .ignoresSafeArea()
-        .background(.blue)
-        // Color(UIColor(red: 1.00, green: 0.93, blue: 0.66, alpha: 0.3))
+        .background(Color(hex: 0xFFE382, opacity: 0.2))
+        //.background(Color(hex: 0xFDEEDC, opacity: 1))
+        //.background(Color(hex: 0xFEFBE9, opacity: 0.5))
+        //.background(Color(hex: 0xFFEEA9, opacity: 0.4))
     }
 }
 
