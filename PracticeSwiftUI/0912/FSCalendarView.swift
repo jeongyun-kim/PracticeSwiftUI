@@ -8,28 +8,31 @@
 import SwiftUI
 
 
+enum Detents: CaseIterable {
+    case mid
+    case large
+    
+    var detents: PresentationDetent {
+        switch self {
+        case .mid:
+            return .fraction(0.3)
+        case .large:
+            return .fraction(0.7)
+        }
+    }
+}
+
 struct FSCalendarView: View {
     @StateObject var vm = CalendarViewModel()
     @State private var isPresenting = true
+    @State private var isLarge: PresentationDetent = Detents.mid.detents
     
-    enum Detents {
-        case mid
-        case large
-        
-        var detents: PresentationDetent {
-            switch self {
-            case .mid:
-                return .fraction(0.4)
-            case .large:
-                return .fraction(0.75)
-            }
-        }
-    }
+   
     
     var body: some View {
         NavigationView {
             GeometryReader { proxy in
-                ScrollView {
+                
                     VStack(alignment: .leading, spacing: 8) {
                         Text(vm.output.currentDate)
                             .font(.callout)
@@ -45,27 +48,35 @@ struct FSCalendarView: View {
                             .padding(.bottom, 8)
                         
                         
-                        FSCalendarViewControllerWrapper(vm: vm)
+                        FSCalendarViewControllerWrapper(vm: vm, modalMode: $isLarge)
                             .frame(height: (proxy.size.width-32))
                             .padding(.horizontal)
-//                            .sheet(isPresented: $isPresenting, content: {
-//                                BottomSheetView()
-//                                    .presentationDetents([Detents.mid.detents, Detents.large.detents])
-//                                    .presentationBackgroundInteraction(.enabled)
-//                                    .presentationDragIndicator(.hidden)
-//                                    .presentationCornerRadius(42)
-//                                    .interactiveDismissDisabled()
-//                            })
+                                                    .sheet(isPresented: $isPresenting, content: {
+                                                        BottomSheetView()
+                                                            .presentationDetents([Detents.mid.detents, Detents.large.detents], selection: $isLarge)
+                                                            .presentationBackgroundInteraction(.enabled)
+                                                            .presentationDragIndicator(.hidden)
+                                                            .presentationCornerRadius(42)
+                                                            .interactiveDismissDisabled()
+                                                    })
+                        
+                     
                     }
                     
-                }
+                
             }
-        }
-        
-        
-        //
-        //
+            .navigationBar {
+                Button(action: {
+                    
+                }, label: {
+                    Image(systemName: "line.3.horizontal")
+                        .tint(Color(hex: 0xFF8911))
+                })
+            } trailing: {
+                Text("")
+            }
 
+        }
     }
 }
 

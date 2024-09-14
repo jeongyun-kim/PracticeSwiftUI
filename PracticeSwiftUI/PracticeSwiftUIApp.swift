@@ -11,8 +11,8 @@ import SwiftUI
 struct PracticeSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            MainTabView()
-            //FSCalendarView()
+            //MainTabView()
+            FSCalendarView()
             //CoinView()
             //SearchView()
             //ContentView()

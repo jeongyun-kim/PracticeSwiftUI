@@ -42,12 +42,17 @@ final class CalendarViewModel: ObservableObject {
         input.selectedDate
             .sink { value in
                 guard let value else { return }
-                print(value)
+                let date = Calendar.current.dateComponents([.month, .year], from: value)
+                let year = date.year
+                let month = date.month
+                self.output.selectedDate = value
+                self.output.currentDate = "\(year)년 \(month)월"
             }.store(in: &subscriptions)
         
         input.calendar
             .sink { [weak self] value in
                 guard let self else { return }
+                print(#function, value)
                 guard let year = value[0], let month = value[1] else { return }
                 self.output.currentDate = "\(year)년 \(month)월"
             }.store(in: &subscriptions)

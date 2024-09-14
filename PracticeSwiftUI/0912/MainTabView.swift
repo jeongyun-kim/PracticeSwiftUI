@@ -8,31 +8,40 @@
 import SwiftUI
 
 struct MainTabView: View {
+    enum SelectedTab: String, Hashable {
+        case calendar
+        case setting
+    }
     @State private var showSheet = true
+    @State private var selectedTab: SelectedTab = .calendar
     
-//    init() {
-//        UITabBar.appearance().backgroundColor = .white
-//        UITabBar.appearance().tintColor = .brown
-//    }
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor(red: 1.00, green: 0.89, blue: 0.51, alpha: 0.2)
+      
+    }
     var body: some View {
         TabView {
+        
             FSCalendarView()
                 .tabItem { Image(systemName: "calendar") }
                 .onAppear {
                     showSheet = true
-                    
-//                    UITabBar.appearance().backgroundColor = UIColor(red: 1.00, green: 0.89, blue: 0.51, alpha: 0.2)
                 }
-                
-            Text("ABC")
-                .tabItem { Image(systemName: "calendar") }
+             
+            ScrollView { }
+                .tabItem { Image(systemName: "magnifyingglass") }
                 .task {
                     showSheet = false
                 }
+            
+            ScrollView { }
+                .tabItem { Image(systemName: "gearshape") }
+                .task {
+                    showSheet = false
+                }
+            
         }
-//        .background(Color(hex: 0xFFE382, opacity: 0.2))
-        .toolbarBackground(.red, for: .tabBar)
-        .toolbarBackground(.visible, for: .tabBar)
+
         .sheet(isPresented: $showSheet) {
             BottomSheetView()
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
@@ -43,8 +52,8 @@ struct MainTabView: View {
             .interactiveDismissDisabled()
             
             .bottomMasksForSheet()
+            
         }
-        
     }
 }
 

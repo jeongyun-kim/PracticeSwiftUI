@@ -13,13 +13,18 @@ import SnapKit
 
 struct FSCalendarViewControllerWrapper: UIViewControllerRepresentable {
     @ObservedObject var vm: CalendarViewModel
-    
+    @Binding var modalMode: PresentationDetent
+
     func makeUIViewController(context: Context) -> some UIViewController {
         FSCalendarViewController(vm: vm)
     }
     
+    // 뷰컨 업데이트 => mid면 월간달력 / large면 주간달력
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        
+        let detents = Detents.allCases.map { $0.detents }
+        guard let type = detents.filter({ $0 == modalMode }).first else { return }
+        guard let vc = uiViewController as? FSCalendarViewController else { return }
+        vc.changeScope(type)
     }
     
     class FSCalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
@@ -50,7 +55,6 @@ struct FSCalendarViewControllerWrapper: UIViewControllerRepresentable {
             calendar.appearance.weekdayFont = UIFont.systemFont(ofSize: 14)
             calendar.appearance.borderRadius = 0.5
             calendar.headerHeight = 0
-            calendar.placeholderType = .none
             return calendar
         }()
         
@@ -77,26 +81,51 @@ struct FSCalendarViewControllerWrapper: UIViewControllerRepresentable {
             return cell
         }
         
+        // 선택한 날짜 변경
         func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
             calendar.today = date
             vm.action(.selectedDate(date: date))
+            animateByDate(date)
         }
         
+        // 선택한 날짜와 현재 날짜 비교해서 미래라면 다음 페이지로 과거라면 이전 페이지로
+        private func animateByDate(_ selectedDate: Date) {
+            let selectedMonth = Calendar.current.component(.month, from: selectedDate)
+            let thisMonth = Calendar.current.component(.month, from: Date())
+            guard selectedMonth != thisMonth else { return }
+            calendar.setCurrentPage(selectedDate, animated: true)
+        }
+        
+        // 달력 페이지 바뀔 때마다 currentDate 변경
         func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
             sendDate()
         }
         
+        // ❗️주간 모드에서 다음달 또는 이전달 날짜 선택한 상태에서 월간 모드로 돌아갔을 때, currentDate 변경해줘야함
+        func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
+            print(calendar.scope.rawValue, vm.output.selectedDate)
+            guard calendar.scope.rawValue == 1 else { return }
+            print(vm.output.currentDate)
+        }
+        
+        // 뷰모델로 데이터 전송
         private func sendDatas() {
             vm.action(.selectedDate(date: calendar.today))
             sendDate()
-            
         }
         
+        // 현재 페이지 날짜 보내기 => currentDate 변경
         private func sendDate() {
             let date = Calendar.current.dateComponents([.month, .year], from: calendar.currentPage)
             let year = date.year
             let month = date.month
             vm.action(.currentDate(year: year, month: month))
+        }
+        
+        // BottomSheet의 상태에 따라 달력 월간 또는 주간으로 변경
+        func changeScope(_ data: PresentationDetent) {
+            let isMidSheet = data == Detents.mid.detents
+            calendar.scope = isMidSheet ? .month : .week
         }
     }
 }

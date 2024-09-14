@@ -14,10 +14,11 @@ struct BottomSheetView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .ignoresSafeArea()
-        .background(Color(hex: 0xFFE382, opacity: 0.2))
+        //.background(Color(hex: 0xFFE382, opacity: 1))
         //.background(Color(hex: 0xFDEEDC, opacity: 1))
-        //.background(Color(hex: 0xFEFBE9, opacity: 0.5))
-        //.background(Color(hex: 0xFFEEA9, opacity: 0.4))
+        //.background(Color(hex: 0xFEFBE9, opacity: 1))
+        //.background(Color(hex: 0xFFEEA9, opacity: 1))
+        .background(Color(hex: 0xFADFA1, opacity: 0.7))
     }
 }
 

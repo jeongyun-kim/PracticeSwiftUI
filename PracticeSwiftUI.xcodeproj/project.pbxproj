@@ -46,6 +46,7 @@
 		E07A1FF62C94261D00557A22 /* Color +.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A1FF52C94261D00557A22 /* Color +.swift */; };
 		E07A1FFB2C94891D00557A22 /* BottomSheetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A1FFA2C94891D00557A22 /* BottomSheetHelper.swift */; };
 		E07A20182C948EFD00557A22 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A20172C948EFD00557A22 /* MainTabView.swift */; };
+		E07A201D2C949D0700557A22 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A201C2C949D0700557A22 /* SideMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,7 @@
 		E07A1FF52C94261D00557A22 /* Color +.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color +.swift"; sourceTree = "<group>"; };
 		E07A1FFA2C94891D00557A22 /* BottomSheetHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetHelper.swift; sourceTree = "<group>"; };
 		E07A20172C948EFD00557A22 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		E07A201C2C949D0700557A22 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +240,7 @@
 		E07A1FC82C919B4E00557A22 /* 0912 */ = {
 			isa = PBXGroup;
 			children = (
+				E07A201B2C949D0000557A22 /* SideMenu */,
 				E07A1FF92C94888F00557A22 /* Bottom */,
 				E07A20172C948EFD00557A22 /* MainTabView.swift */,
 				E07A1FF52C94261D00557A22 /* Color +.swift */,
@@ -256,6 +259,14 @@
 				E07A1FFA2C94891D00557A22 /* BottomSheetHelper.swift */,
 			);
 			path = Bottom;
+			sourceTree = "<group>";
+		};
+		E07A201B2C949D0000557A22 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				E07A201C2C949D0700557A22 /* SideMenuView.swift */,
+			);
+			path = SideMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +370,7 @@
 				E07A1FF62C94261D00557A22 /* Color +.swift in Sources */,
 				E01765882C89FBD5000B649E /* CategoryView.swift in Sources */,
 				E03CF7A22C85B36100E420EB /* ContentView.swift in Sources */,
+				E07A201D2C949D0700557A22 /* SideMenuView.swift in Sources */,
 				E03CF7E32C87415500E420EB /* CoinView.swift in Sources */,
 				E07A1FFB2C94891D00557A22 /* BottomSheetHelper.swift in Sources */,
 				E03CF7A02C85B36100E420EB /* PracticeSwiftUIApp.swift in Sources */,
