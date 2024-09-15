@@ -46,7 +46,8 @@
 		E07A1FF62C94261D00557A22 /* Color +.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A1FF52C94261D00557A22 /* Color +.swift */; };
 		E07A1FFB2C94891D00557A22 /* BottomSheetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A1FFA2C94891D00557A22 /* BottomSheetHelper.swift */; };
 		E07A20182C948EFD00557A22 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A20172C948EFD00557A22 /* MainTabView.swift */; };
-		E07A201D2C949D0700557A22 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A201C2C949D0700557A22 /* SideMenuView.swift */; };
+		E07A20252C97222900557A22 /* SideContentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A20242C97222900557A22 /* SideContentsView.swift */; };
+		E07A20272C9729A800557A22 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A20262C9729A800557A22 /* SideMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,7 +89,8 @@
 		E07A1FF52C94261D00557A22 /* Color +.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color +.swift"; sourceTree = "<group>"; };
 		E07A1FFA2C94891D00557A22 /* BottomSheetHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetHelper.swift; sourceTree = "<group>"; };
 		E07A20172C948EFD00557A22 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-		E07A201C2C949D0700557A22 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		E07A20242C97222900557A22 /* SideContentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideContentsView.swift; sourceTree = "<group>"; };
+		E07A20262C9729A800557A22 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,9 +242,9 @@
 		E07A1FC82C919B4E00557A22 /* 0912 */ = {
 			isa = PBXGroup;
 			children = (
+				E07A20172C948EFD00557A22 /* MainTabView.swift */,
 				E07A201B2C949D0000557A22 /* SideMenu */,
 				E07A1FF92C94888F00557A22 /* Bottom */,
-				E07A20172C948EFD00557A22 /* MainTabView.swift */,
 				E07A1FF52C94261D00557A22 /* Color +.swift */,
 				E07A1FC92C919B5900557A22 /* FSCalendarView.swift */,
 				E07A1FCB2C919C5800557A22 /* FSCalendarViewControllerWrapper.swift */,
@@ -264,7 +266,8 @@
 		E07A201B2C949D0000557A22 /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
-				E07A201C2C949D0700557A22 /* SideMenuView.swift */,
+				E07A20242C97222900557A22 /* SideContentsView.swift */,
+				E07A20262C9729A800557A22 /* SideMenuView.swift */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -351,10 +354,12 @@
 				E03CF7D82C86FDB200E420EB /* SearchView.swift in Sources */,
 				E01765802C893A55000B649E /* RandomImageView.swift in Sources */,
 				E03CF7DC2C86FDE600E420EB /* Market.swift in Sources */,
+				E07A20272C9729A800557A22 /* SideMenuView.swift in Sources */,
 				E03CF7F92C88910400E420EB /* CoinView_0904.swift in Sources */,
 				E03CF7E62C87440900E420EB /* Banner.swift in Sources */,
 				E03CF7EB2C87469800E420EB /* CoinDetailView.swift in Sources */,
 				E07A1FD52C919D6500557A22 /* CalendarCell.swift in Sources */,
+				E07A20252C97222900557A22 /* SideContentsView.swift in Sources */,
 				E03CF7B82C85BB8000E420EB /* ProfileImageSettingView.swift in Sources */,
 				E07A1FCC2C919C5800557A22 /* FSCalendarViewControllerWrapper.swift in Sources */,
 				E07A20182C948EFD00557A22 /* MainTabView.swift in Sources */,
@@ -370,7 +375,6 @@
 				E07A1FF62C94261D00557A22 /* Color +.swift in Sources */,
 				E01765882C89FBD5000B649E /* CategoryView.swift in Sources */,
 				E03CF7A22C85B36100E420EB /* ContentView.swift in Sources */,
-				E07A201D2C949D0700557A22 /* SideMenuView.swift in Sources */,
 				E03CF7E32C87415500E420EB /* CoinView.swift in Sources */,
 				E07A1FFB2C94891D00557A22 /* BottomSheetHelper.swift in Sources */,
 				E03CF7A02C85B36100E420EB /* PracticeSwiftUIApp.swift in Sources */,

@@ -18,7 +18,8 @@ struct BottomSheetView: View {
         //.background(Color(hex: 0xFDEEDC, opacity: 1))
         //.background(Color(hex: 0xFEFBE9, opacity: 1))
         //.background(Color(hex: 0xFFEEA9, opacity: 1))
-        .background(Color(hex: 0xFADFA1, opacity: 0.7))
+        //.background(Color(hex: 0xFADFA1, opacity: 0.7))
+        .background(Color(hex: 0xfcecc7))
     }
 }
 

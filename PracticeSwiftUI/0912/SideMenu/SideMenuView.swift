@@ -2,34 +2,36 @@
 //  SideMenuView.swift
 //  PracticeSwiftUI
 //
-//  Created by 김정윤 on 9/14/24.
+//  Created by 김정윤 on 9/15/24.
 //
 
 import SwiftUI
 
 struct SideMenuView: View {
-    @Binding var isShowing: Bool
+    @Binding var isPresenting: Bool
     var content: AnyView
-    var edgeTransition: AnyTransition = .move(edge: .leading)
+    
     var body: some View {
-        ZStack(alignment: .bottom) {
-            if (isShowing) {
-                Color.black
-                    .opacity(0.3)
-                    .ignoresSafeArea()
-                    .onTapGesture {
-                        isShowing.toggle()
-                    }
-                content
-                    .transition(edgeTransition)
-                    .background(
-                        Color.clear
-                    )
+            ZStack{
+                if isPresenting {
+                    Color.black
+                        .opacity(0.3)
+                        .onTapGesture {
+                            isPresenting.toggle()
+                        }
+                    content
+                        .transition(.move(edge: .leading))
+                        .background(.clear)
+                }
             }
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
-        .ignoresSafeArea()
-        .animation(.easeInOut, value: isShowing)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+            .ignoresSafeArea()
+            .animation(.easeInOut, value: isPresenting)
+            
+            
     }
 }
 
+#Preview {
+    SideMenuView(isPresenting: .constant(true), content: AnyView(SideContentsView(selectedSideMenu: .constant(0), isPresenting: .constant(true))))
+}
