@@ -90,32 +90,33 @@ struct FSCalendarViewControllerWrapper: UIViewControllerRepresentable {
         
         // 선택한 날짜와 현재 날짜 비교해서 미래라면 다음 페이지로 과거라면 이전 페이지로
         private func animateByDate(_ selectedDate: Date) {
+            guard calendar.scope.rawValue == 0 else { return }
             let selectedMonth = Calendar.current.component(.month, from: selectedDate)
-            let thisMonth = Calendar.current.component(.month, from: Date())
+            let thisMonth = Calendar.current.component(.month, from: calendar.currentPage)
             guard selectedMonth != thisMonth else { return }
             calendar.setCurrentPage(selectedDate, animated: true)
         }
         
         // 달력 페이지 바뀔 때마다 currentDate 변경
         func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
-            sendDate()
+            sendCurrentPageDate()
         }
         
-        // ❗️주간 모드에서 다음달 또는 이전달 날짜 선택한 상태에서 월간 모드로 돌아갔을 때, currentDate 변경해줘야함
+        // 주간 모드에서 다음달 또는 이전달 날짜 선택한 상태에서 월간 모드로 돌아갔을 때, currenPage가 바뀌었을 가능성 O
+        // => currentDate 변경
         func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
-            print(calendar.scope.rawValue, vm.output.selectedDate)
-            guard calendar.scope.rawValue == 1 else { return }
-            print(vm.output.currentDate)
+            guard calendar.scope.rawValue == 0 else { return }
+            sendCurrentPageDate()
         }
         
         // 뷰모델로 데이터 전송
         private func sendDatas() {
             vm.action(.selectedDate(date: calendar.today))
-            sendDate()
+            sendCurrentPageDate()
         }
         
         // 현재 페이지 날짜 보내기 => currentDate 변경
-        private func sendDate() {
+        private func sendCurrentPageDate() {
             let date = Calendar.current.dateComponents([.month, .year], from: calendar.currentPage)
             let year = date.year
             let month = date.month
